@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template 3</title>
+</head>
+<body>
+
+    <h1>Estoy en template 3</h1>
+    <p>Alumno: {{ nombre }}</p>
+    <p>Edad: {{ edad }} años</p>
+    <p>Fecha: {{ fecha }}</p>
+    <div style="text-align: center;">
+        <h4>Notas:</h4>
+        {% for nota in notas %}
+
+            {% if nota >= 6 %}
+                <p style="color: green;">Nota buena: {{nota}}</p>
+            {% else %} <p style="color: red;">Nota mala: {{nota}}</p>
+            {% endif %}
+    
+        {% endfor %}
+    </div>
+</body>
+</html>

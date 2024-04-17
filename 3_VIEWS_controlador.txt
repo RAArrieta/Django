@@ -1,0 +1,20 @@
+VIEWS ES LO QUE ENVIAMOS A LA PLANTILLA
+EN CONFIG CREAMOS EL ARCHIVO CONTROLADOR 
+views.py
+
+IMPORTAMOS UNA CLASE DE DJANGO PARA GENERAR UNA RESPUESTA
+from django.http import HttpResponse
+
+YA CREAMOS LAS FUNCIONES, RECIBEN POR PARAMENTRO EL PEDIDO Y RETORNA UNA RESPUESTA
+def saludo(request):
+	return HttpResponse ("Hola Mundo!!...")
+
+EN urls.py INDICAMOS A DJANGO CUAL SERA LA URL
+- importamos views
+from . import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path("saludo/", views.saludo),
+]
+

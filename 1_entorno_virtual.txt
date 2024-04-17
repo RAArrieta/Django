@@ -1,0 +1,12 @@
+- creamos el proyecto
+- parados en el proyecto PS J:\Django\Proyecto>python -m venv .venv
+- ctrl + shift + p
+- seleccionamos como interprete de python el entorno virtual .venv
+
+SI NO SE LOGRO DE ESTA MANERA PODEMOS HACERLO MANUALMENTE
+J:\Django\Proyecto>.\.venv\Scripts\activate
+
+SI Scripts ESTA DESHABILITADA EN EL SISTEMA
+- buscamos powershell e ingresamos como administrador C:\WINDOWS\system32>Set-ExecutionPolicy Unrestricted
+- respondemos SI
+- J:\Django\Proyecto>.\.venv\Scripts\activate

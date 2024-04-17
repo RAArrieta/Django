@@ -1,0 +1,8 @@
+DENTRO DEL ENTORNO VIRTUAL INSTALAMOS DJANGO
+(.venv) PS J:\Django\Proyecto> pip install django
+
+CREAMOS NUESTRO Proyecto
+(.venv) PS J:\Django\Proyecto\project>django-admin startproject config .
+
+PARA CORRER EL PROYECTO CREADO
+(.venv) PS J:\Django\Proyecto\project>python manage.py runserver
