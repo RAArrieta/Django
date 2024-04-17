@@ -1,2 +1,13 @@
 MODELS ALMACENA, BORRA, MODIFICA Y MANIPULA EL CAUDAL PRINCIPAL DE LOS DATOS
+CREAMOS LA APP CLIENTE DE LA SIGUIENTE MANERA
+J:\Django\Proyecto\project> django-admin startapp cliente
 
+DEBEMOS AGREGAR LA APP
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
