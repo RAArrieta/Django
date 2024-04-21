@@ -1,6 +1,8 @@
 MODELS ALMACENA, BORRA, MODIFICA Y MANIPULA EL CAUDAL PRINCIPAL DE LOS DATOS
 CREAMOS LA APP CLIENTE DE LA SIGUIENTE MANERA
 J:\Django\Proyecto\project> django-admin startapp cliente
+opcion2
+J:\Django\Proyecto\project> python manage.py startapp cliente
 
 DEBEMOS AGREGAR LA APP
 INSTALLED_APPS = [
@@ -48,13 +50,11 @@ CREAMOS UN SUPER USUARIO POR UNICA VEZ
 usuario: admin
 contraseña: 123
 
-corremos runserver y para entrar en el link agregamos /admin
-
-EN CLIENTE ADMIN TENGO QUE TRAER LOS MODELOS Y LOS REGISTRO
+EN LA APP ADMIN TENGO QUE TRAER LOS MODELOS Y LOS REGISTRO
 from django.contrib import admin
 from . import models
 
 admin.site.register(models.Pais)
 admin.site.register(models.Cliente)
 
-
+corremos runserver y para entrar en el link agregamos /admin
