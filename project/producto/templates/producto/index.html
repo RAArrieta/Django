@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-</head>
-<body>
-    <h1>PRODUCTOS</h1>
+{% extends 'core/base.html' %}
+{% block titulo %}
+    PRODUCTOS
+{% endblock titulo %}
+
+{% block contenido %}
     <ul>
         {% for producto in productos %}
         <li>{{producto}}</li>
@@ -14,5 +11,5 @@
         {% endfor %}
     </ul>
 
-</body>
-</html>
+    <a href="{% url 'core:home' %}">Volver a Home</a>
+{% endblock contenido %}
