@@ -1,0 +1,13 @@
+EN CADA URL CREAMOS UNA VARIABLE CON EL NOMBRE DE LA APP
+app_name = "core"
+
+from . import views
+
+# y nombramos cada url
+urlpatterns = [
+    path('', views.home, name = "home"),
+]
+
+CREAMOS EN CADA TEMPLATE LOS HIPERVINCULOS
+    <a href="{% url 'cliente:home' %}">Ir a Cliente</a>
+    <a href="{% url 'producto:home' %}">Ir a Producto</a>

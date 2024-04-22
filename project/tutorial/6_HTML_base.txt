@@ -1,0 +1,30 @@
+CREAMOS LA BASE HTML EN CORE Y AGREGAMOS LOS BLOCKES
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django | Pruebas</title>
+</head>
+<body>
+    <h1 style="color: red;">
+        {% block titulo %}
+        {% endblock titulo %}
+    </h1>
+    <div>
+        {% block contenido %}  
+        {% endblock contenido %}
+    </div>
+</body>
+</html>
+
+YA NO HACEN FALTA EN LOS TEMPLATES TODA LA ESTRUCTURA, SOLO LLAMAMOS A EXTEND
+{% extends 'core/base.html' %}
+{% block titulo %}
+    ESTOY EN HOME
+{% endblock titulo %}
+
+{% block contenido %}
+    <a href="{% url 'cliente:home' %}">Ir a Cliente</a>
+    <a href="{% url 'producto:home' %}">Ir a Producto</a>        
+{% endblock contenido %}
