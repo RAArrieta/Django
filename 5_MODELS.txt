@@ -4,7 +4,7 @@ J:\Django\Proyecto\project> django-admin startapp cliente
 opcion2
 J:\Django\Proyecto\project> python manage.py startapp cliente
 
-DEBEMOS AGREGAR LA APP
+DEBEMOS REGISTRAR LA APP EN CONFIG SETTINGS
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,9 +40,10 @@ System check identified no issues (0 silenced).
 
 DESCARGAMOS SQLite Viewer
 
-CREAMOS LAS MIGRACIONES (NO LOS HACE, )
+CREAMOS LAS MIGRACIONES (ARCHIVOS PYTHON ENCARGADOS DE LA BASE DE DATOS)
 (.venv) PS J:\Django\Proyecto\project> python manage.py makemigrations
 
+EJECUTAMOS LAS MIGRACIONES  PARA QUE REALICEN LOS CAMBIOS EN LA BASE DE DATOS
 (.venv) PS J:\Django\Proyecto\project> python manage.py migrate
 
 CREAMOS UN SUPER USUARIO POR UNICA VEZ
@@ -58,3 +59,27 @@ admin.site.register(models.Pais)
 admin.site.register(models.Cliente)
 
 corremos runserver y para entrar en el link agregamos /admin
+
+
+**CREO DENTRO DE LA APP LA CARPETA TEMPLATES/NOMBRE DE LA APP DENTRO SU INDEX
+ F:\Django\Proyecto\project\cliente\templates\cliente> 
+
+
+**EN URLS DE LA APP HACEMOS LA SOLICITUD A LA FUNCION DE VIEWS
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home),
+]
+
+**EN VIEWS DE LA APP CREAMOS LA FUNCION QUE DA LA RESPUESTA
+from django.shortcuts import render
+from . import models
+
+def home(request):
+    consulta_producto = models.Categoria.objects.all()
+    context = {"clientes": consulta_producto}
+    return render(request,"producto/index.html", context)
+
+Y TENEMOS QUE LLAMARLO DESDE LA URLS DE CONFIG
